@@ -7,7 +7,7 @@ namespace BankAPI.Loggers
 {
     public class AuditAttribute : ActionFilterAttribute
     {
-        readonly Lazy<Audit> audit = new();
+        readonly Lazy<Audit> audit = new Lazy<Audit>(() => new Audit());
 
         public override Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {

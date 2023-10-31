@@ -23,7 +23,7 @@ namespace BankAPI.Entities
 
         public override string ToString()
         {
-            return $"[A] ID: {Id}";
+            return $"[A] ID: {Id} Money: {Money} {Currency}";
         }
     }
 }
