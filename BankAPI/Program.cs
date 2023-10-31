@@ -31,7 +31,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseCors(builder => builder.WithOrigins("https://localhost:44357").WithHeaders());
+app.UseCors(builder => builder.WithOrigins("http://localhost:44357").WithHeaders());
 
 if (app.Environment.IsDevelopment())
 {
@@ -39,7 +39,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.MapControllers();
 
